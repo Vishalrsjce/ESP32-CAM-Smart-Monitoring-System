@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Cost IOT Based Smart Monitoring System - Wikipedia</title>
+    <title>Low Cost IOT Based Smart Monitoring System - Weakypedia</title>
     <style>
         body {
             font-family: sans-serif;
@@ -19,6 +19,7 @@
             padding: 40px;
             border: 1px solid #a2a9b1;
             box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            margin: 20px 0;
         }
         h1 {
             font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
@@ -31,6 +32,7 @@
             color: #54595d;
             margin-bottom: 20px;
         }
+        /* Infobox styling */
         .infobox {
             float: right;
             width: 280px;
@@ -39,31 +41,43 @@
             margin: 0 0 1em 1em;
             padding: 5px;
             font-size: 0.85em;
+            line-height: 1.5;
         }
         .infobox-title {
             text-align: center;
             font-weight: bold;
             background-color: #cedff2;
-            padding: 5px;
+            padding: 8px;
+            font-size: 1.1em;
+        }
+        .infobox th {
+            text-align: left;
+            vertical-align: top;
+            padding: 3px 0;
         }
         .infobox img {
             width: 100%;
             height: auto;
-            padding: 5px 0;
+            border: 1px solid #ccc;
+            margin-top: 5px;
         }
         .section-header {
             border-bottom: 1px solid #a2a9b1;
             margin-top: 1.5em;
             font-weight: bold;
             font-size: 1.5em;
+            padding-bottom: 3px;
         }
         p {
             line-height: 1.6;
             color: #202122;
+            margin: 0.5em 0 1em 0;
         }
         .btn-container {
-            margin-top: 30px;
+            margin-top: 40px;
             text-align: center;
+            border-top: 1px solid #a2a9b1;
+            padding-top: 20px;
         }
         .read-full-btn {
             background-color: #3366cc;
@@ -73,6 +87,7 @@
             border-radius: 2px;
             font-weight: bold;
             display: inline-block;
+            transition: background 0.2s;
         }
         .read-full-btn:hover {
             background-color: #4477dd;
@@ -85,66 +100,76 @@
 <body>
 
 <div class="container">
-    <div class="subtitle">From Weakypedia, the free encyclopedia project</div>
+    <div class="subtitle">From Weakypedia, the free project encyclopedia</div>
     <h1>Low Cost IOT Based Smart Monitoring System</h1>
 
-    <!-- Infobox -->
+    <!-- Infobox Section -->
     <table class="infobox">
         <tr>
-            <th colspan="2" class="infobox-title">Project Overview</th>
+            <th colspan="2" class="infobox-title">Project Technical Profile</th>
         </tr>
         <tr>
             <td colspan="2" style="text-align:center;">
-                <div style="padding:10px; border:1px solid #ccc; background:#eee;">[IoT ESP32 System]</div>
+                <!-- Name of image to include: project_setup.jpg -->
+                <img src="project_setup.jpg" alt="IOT Breadboard Setup">
+                <div style="font-size:0.8em; color:#666; padding:5px;">Hardware Prototype: ESP32-CAM with PIR and DHT11</div>
             </td>
         </tr>
         <tr>
-            <td><b>Developers</b></td>
-            <td>Vishal R, Niteesh H D, Kavana Timmappa Naik, Subhash Hurakadli</td>
+            <th>Developers</th>
+            <td>Vishal R, Niteesh H D, Kavana Timmappa Naik, Subhash Hurakadli, Gayathri S, Anitha S Prasad</td>
         </tr>
         <tr>
-            <td><b>Platform</b></td>
-            <td>ESP32 Microcontroller</td>
+            <th>University</th>
+            <td>JSS Science and Technology University, Mysore</td>
         </tr>
         <tr>
-            <td><b>Sensors</b></td>
+            <th>Core Board</th>
+            <td>ESP32-CAM Microcontroller</td>
+        </tr>
+        <tr>
+            <th>Sensor Array</th>
             <td>PIR, DHT11, Vibration</td>
         </tr>
         <tr>
-            <td><b>Connectivity</b></td>
-            <td>Wi-Fi, Telegram Bot</td>
-        </tr>
-        <tr>
-            <td><b>Data Cloud</b></td>
-            <td>ThingSpeak</td>
+            <th>Services</th>
+            <td>Telegram Bot, ThingSpeak Cloud</td>
         </tr>
     </table>
 
     <p>
-        The <b>Low Cost IOT Based Smart Monitoring System</b> is a cost-effective surveillance and environmental monitoring prototype designed to enhance home and industrial security. Built using the <b>Espressif ESP32</b> microcontroller, the system integrates motion-triggered image capture with real-time environmental data logging.
+        The <b>Low Cost IOT Based Smart Monitoring System</b> is a multi-functional security and environmental monitoring platform. Developed using the <b>ESP32-CAM</b>, the system provides a robust yet affordable alternative to traditional surveillance. It is specifically designed to detect motion, capture visual evidence, and monitor environmental stability in home or industrial settings.
     </p>
 
-    <div class="section-header">Description</div>
+    <div class="section-header">System Description</div>
     <p>
-        The system utilizes a <b>Passive Infrared (PIR)</b> sensor to detect human movement. Upon detection, the ESP32-CAM module captures a high-resolution image and securely transmits it to a user's <b>Telegram</b> account via Wi-Fi. This ensures that the user receives instant visual alerts of any intrusion.
+        The system utilizes a <b>Passive Infrared (PIR)</b> sensor and a vibration sensor to monitor activity. When an intrusion is detected, the ESP32-CAM module is activated to capture a photograph of the subject. These images are transmitted securely over Wi-Fi to a designated <b>Telegram Bot</b>, providing the user with real-time visual alerts on their smartphone. 
+    </p>
+    <p>
+        Simultaneously, the <b>DHT11 sensor</b> tracks temperature and humidity levels. This environmental data is uploaded to the <b>ThingSpeak</b> cloud platform, allowing for historical data analysis and remote climate monitoring from anywhere in the world.
     </p>
 
     <div class="section-header">Core Features</div>
     <ul>
-        <li><b>Motion Detection:</b> Uses PIR and vibration sensors to trigger alerts.</li>
-        <li><b>Instant Messaging:</b> Sends captured images and alerts via a Telegram Bot.</li>
-        <li><b>Environmental Sensing:</b> Measures temperature and humidity using a DHT11 sensor.</li>
-        <li><b>Cloud Analytics:</b> Uploads sensor data to <b>ThingSpeak</b> for remote analysis and historical tracking.</li>
-        <li><b>Energy Management:</b> Includes a relay module to control external devices like light bulbs, contributing to sustainable energy use.</li>
+        <li><b>Intrusion Detection:</b> Motion-triggered image capture with instant notifications.</li>
+        <li><b>Cloud Analytics:</b> Real-time environmental tracking (Temp/Humidity) via ThingSpeak.</li>
+        <li><b>Remote Control:</b> Integration of a relay module for demand-based control of external devices (e.g., lighting), improving energy efficiency.</li>
+        <li><b>Affordability:</b> Built using cost-effective COTS (Commercial Off-The-Shelf) components.</li>
+        <li><b>Connectivity:</b> Seamless integration with the Telegram messaging API.</li>
     </ul>
 
-    <div class="section-header">Performance</div>
+    <div class="section-header">Performance Metrics</div>
     <p>
-        According to testing results, the system demonstrates a motion detection response time of approximately <b>12 seconds</b>, while the end-to-end notification (image capture to Telegram message) takes roughly <b>5 seconds</b> under stable Wi-Fi conditions.
+        Testing under laboratory conditions confirmed the system's reliability:
     </p>
+    <ul>
+        <li><b>PIR Response Time:</b> Approximately 12 seconds for motion detection.</li>
+        <li><b>Notification Speed:</b> Average of 5 seconds for the image to reach the user's Telegram account.</li>
+        <li><b>Environmental Accuracy:</b> Accuracy within ±1°C for temperature and ±2 for humidity.</li>
+    </ul>
 
     <div class="btn-container">
-        <!-- Change 'project_report.pdf' to your actual filename -->
+        <!-- Ensure your PDF file is named 'project_report.pdf' -->
         <a href="project_report.pdf" target="_blank" class="read-full-btn">READ FULL OPEN THIS PDF</a>
     </div>
 
